@@ -14,69 +14,25 @@
     <title>Salary Program, with JS File</title>
   </head>
   <body>
+    <!-- references javascript file -->
     <script src="./js/script.js"></script>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Area of a triangle, with JS</span>
-        </div>
-      </header>
-      <main class="mdl-layout__content">
-        <table>
-          <tr>
-            <th>
-              <img src="./images/download.png" alt="rectangle" width="75%" height="auto"/>
-            </th>
-            <th>
-              <h2>Formula</h2>
-              <h3>A = 1/2(base*height)</h3>
-            </th>
-          </tr>
-        </table>
-        <!-- Simple Textfield -->
-        <form action="#">
-          <p>Base</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="base-of-triangle"
-            />
-            <label class="mdl-textfield__label" for="base-of-triangle"">Base ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-
-        <!-- Numeric Textfield -->
-        <form action="#">
-          <p>Height</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="height-of-triangle"
-            />
-            <label class="mdl-textfield__label" for="height-of-triangle"">Height ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()"
-        >
-          Calculate
-        </button>
-        <br />
-        <p>
-          <div id="answer">
-            <div id="area"></div>
-          </div>
-        </p>
-      </main>
-    </div>
+    <h1>Salary Program, with JS File</h1>
+    <h3>Please enter the following:</h3>
+    <p>
+      <!-- creates text field for users to input information about their street which will be stored and used to present their full address once the button is clicked -->
+      <form action="javascript:calculatePay ()">
+        <label for="hours">Number of Hours Worked:</label>
+        <input type="number" step=".1" id="hours" placeholder="Hours"><br><br>
+        <label for="wage">Hourly Wage: $</label>
+        <input type="number" step=".1" id="wage" placeholder="Hourly Wage"><br><br>
+        <input type="submit" value="Calculate Pay">
+      </form>
+    </p>
+		<!-- Create a space where the user information will be displayed -->
+    <div id="user-info"></div>
+    <div id="taxed"></div>
+    <div id="netPay"></div>
+    <br>
+    <img src="./images/download.jpg" alt="rimce" height="600px" width="400px"" >
   </body>
 </html>
